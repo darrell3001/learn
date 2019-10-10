@@ -1,6 +1,13 @@
 const fetch = require("node-fetch");
 
-//Long form
+//Synchronous - oldschool
+async function getData0(url) {
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log(json);
+}
+
+//Long form - Async using promises
 function getData1(url) { 
     fetch(url) 
         .then ( function funcA(response) { return response.json() } )
@@ -34,7 +41,9 @@ function getData4(url) {
 
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
 
+getData0(apiUrl);
 getData1(apiUrl);
 getData2(apiUrl);
 getData3(apiUrl);
 getData4(apiUrl);
+

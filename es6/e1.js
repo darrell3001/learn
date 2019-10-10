@@ -344,6 +344,13 @@
 
 const fetch = require("node-fetch");
 
+//Synchronous (oldschool)
+async function getData0(url) {
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log(json);
+}
+
 //Simplified
 function getData2(url) { 
     fetch(url) 
@@ -370,6 +377,7 @@ function getData4(url) {
 
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
 
+getData1(apiUrl);
 getData2(apiUrl);
 getData3(apiUrl);
 getData4(apiUrl);
