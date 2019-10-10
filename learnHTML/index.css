@@ -1,0 +1,14 @@
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: inline-block;
+  }
+  
+  .circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: green;
+  }
